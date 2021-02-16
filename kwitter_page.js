@@ -34,6 +34,8 @@ var spanWithTag = "<span class='glyphicon glyphicon-thumbs-up'> Like: " + like +
 
 var row = nameWithTag + messageWithTag + likeButton + spanWithTag;
 document.getElementById("output").innerHTML += row;
+
+
 //End code
       } });  }); }
 getData();
@@ -74,3 +76,22 @@ function logout() {
       window.location = "index.html";
 }
 
+var value = localStorage.getItem("room name");
+
+function thing() {
+      document.getElementById("nameName").innerHTML = value;
+}
+
+window.addEventListener("keydown", my_keydown);
+
+function my_keydown(e) {
+
+      keypressed = e.keyCode;
+      console.log(keypressed);
+      
+      
+      if (keypressed == "13") {
+          send();
+          console.log("send");
+      }
+}
